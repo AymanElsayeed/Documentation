@@ -14,12 +14,17 @@
                 element.setAttribute('src', 'docs/html/' + element.getAttribute('src'));
             });
 
-            //const elementsWithRel = document.querySelectorAll('[href]');
+            const elementsWithRel = document.querySelectorAll('[href]');
             // Loop through each element and update the `rel` attribute
-            // elementsWithRel.forEach(element => {
-            //     // Update the `src` attribute to the new path
-            //     element.setAttribute('href', 'docs/html/' + element.getAttribute('src'));
-            // });
+            elementsWithRel.forEach(element => {
+                // check if the element contain css file
+                if (element.getAttribute('href').includes('.css')) {
+                    // Update the `href` attribute to the new path
+                    // element.setAttribute('href', 'docs/html/_static/' + element.getAttribute('href'));
+                    element.setAttribute('href', 'html/' + element.getAttribute('href'));
+                }
+
+            });
             // }
         });
     </script>
