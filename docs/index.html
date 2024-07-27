@@ -11,7 +11,7 @@
                 // Loop through each element and update the `src` attribute
                 elementsWithSrc.forEach(element => {
                     // Update the `src` attribute to the new path
-                    element.setAttribute('src', 'html/' + element.getAttribute('src').split('/').pop());
+                    element.setAttribute('src', 'html/' + element.getAttribute('src'));
                 });
             }
         });
